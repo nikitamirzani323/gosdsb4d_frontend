@@ -1,7 +1,12 @@
 <script>
+	
 	import Navbar from "./components/Navbar.svelte"
 	import Footer from "./components/Footer.svelte"
 	import Home from "./pages/Home.svelte"
+	
+	
+
+	
 	
 	let client_device = "";
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
