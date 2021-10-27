@@ -1,8 +1,12 @@
 html,
 body {
     font-size: 1rem;
-    font-family:'MS Gothic',meiryo,Hiragino Kaku Gothic Pro;
+    
     color: #acacac;
     line-height: 1.5;
     background: white;
+}
+.container {
+    width: 1170px;
+    max-width: none !important;
 }
