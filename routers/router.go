@@ -19,5 +19,6 @@ func Init() *fiber.App {
 		Browse:    true,
 	})
 	app.Post("api/listsdsbday", controllers.ListResultHome)
+	app.Post("api/listsdsbnight", controllers.ListResultHomeNight)
 	return app
 }

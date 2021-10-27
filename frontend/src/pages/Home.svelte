@@ -18,6 +18,7 @@
     const sdsb4dday = ref(db, 'sdsb4dday');
     const sdsb4dnight = ref(db, 'sdsb4dnight');
     let listsdsbday = [];
+    let listsdsbnight = [];
     let size_image = "40"
     let size_clock = "50"
     let day_date_draw = ""
@@ -39,6 +40,7 @@
     let day_img_4_prize3 = ""
 
     let night_date_draw = ""
+    let night_next_draw = ""
     let night_prize1 = ""
     let night_prize2 = ""
     let night_prize3 = ""
@@ -61,7 +63,7 @@
     onValue(sdsb4dday, (snapshot) => {
         const data = snapshot.val();
         day_date_draw = data['datedraw']
-        day_next_draw = data['nextdraw']
+        day_next_draw = dayjs(data['nextdraw']).format("DD-MMM-YYYY")
         
         day_prize1 = data['prize1']
         day_prize2 = data['prize2']
@@ -119,6 +121,7 @@
     onValue(sdsb4dnight, (snapshot) => {
         const data = snapshot.val();
         night_date_draw = data['datedraw']
+        night_next_draw = dayjs(data['nextdraw']).format("DD-MMM-YYYY")
         night_prize1 = data['prize1']
         night_prize2 = data['prize2']
         night_prize3 = data['prize3']
@@ -227,7 +230,43 @@
             }
         }
     }
+    async function initSDSB4DNIGHT() {
+        const resPasar = await fetch("/api/listsdsbnight", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+            }),
+        });
+        if (!resPasar.ok) {
+            const pasarMessage = `An error has occured: ${resPasar.status}`;
+            throw new Error(pasarMessage);
+        } else {
+            const jsonPasar = await resPasar.json();
+            if (jsonPasar.status == 200) {
+            let record = jsonPasar.record;
+            if (record != null) {
+                for (var i = 0; i < 5; i++) {
+                listsdsbnight = [
+                    ...listsdsbnight,{
+                        sdsbnight_date: record[i]["sdsbnight_date"],
+                        sdsbnight_prize1: record[i]["sdsbnight_prize1"],
+                        sdsbnight_prize2: record[i]["sdsbnight_prize2"],
+                        sdsbnight_prize3: record[i]["sdsbnight_prize3"]
+                    },
+                ];
+                }
+            } else {
+                alert("Error");
+            }
+            } else {
+            alert("Error");
+            }
+        }
+    }
     initSDSB4DDAY()
+    initSDSB4DNIGHT()
 </script>
 <div class="row">
     <div class="col-sm-6">
@@ -238,7 +277,7 @@
                 </tr>
                 <tr style="background-color: #3e266d;">
                     <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:white;">TIME</th>
-                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:white;">{day_date_draw}, 02.30PM</th>
+                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:white;">{day_next_draw}, 02.30PM</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
@@ -324,7 +363,7 @@
                 </tr>
                 <tr style="background-color: #f9da7c;">
                     <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:black;">TIME</th>
-                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:black;">{night_date_draw}, 21.30PM</th>
+                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:black;">{night_next_draw}, 21.30PM</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
@@ -388,12 +427,12 @@
                 </tr>
             </thead>
             <tbody style="border-top:none;">
-                {#each listsdsbday as rec }
+                {#each listsdsbnight as rec }
                 <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">{rec.sdsbday_date}</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize1}</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize2}</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize3}</td>
+                    <td style="text-align: center;vertical-align:top;font-size: 15px;">{rec.sdsbnight_date}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbnight_prize1}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbnight_prize2}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbnight_prize3}</td>
                 </tr>
                 {/each}
             </tbody>
