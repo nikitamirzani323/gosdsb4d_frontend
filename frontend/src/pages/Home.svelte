@@ -1,7 +1,7 @@
 <script>
     import { initializeApp } from "firebase/app";
     import { getDatabase, ref, onValue } from "firebase/database";
-    
+    import dayjs from "dayjs";
     const firebaseConfig = {
         apiKey: "AIzaSyCnjwV66P7jDLx5A0Hlh7CHKoZ2tg9jmMY",
         authDomain: "united-rope-233010.firebaseapp.com",
@@ -18,7 +18,9 @@
     const sdsb4dday = ref(db, 'sdsb4dday');
     const sdsb4dnight = ref(db, 'sdsb4dnight');
     let size_image = "40"
+    let size_clock = "50"
     let day_date_draw = ""
+    let day_next_draw = ""
     let day_prize1 = ""
     let day_prize2 = ""
     let day_prize3 = ""
@@ -51,9 +53,15 @@
     let night_img_2_prize3 = ""
     let night_img_3_prize3 = ""
     let night_img_4_prize3 = ""
+    let temp_day = ""
+    let temp_day_hour = "00"
+    let temp_day_minute = "00"
+    let temp_day_second = "00"
     onValue(sdsb4dday, (snapshot) => {
         const data = snapshot.val();
         day_date_draw = data['datedraw']
+        day_next_draw = data['nextdraw']
+        
         day_prize1 = data['prize1']
         day_prize2 = data['prize2']
         day_prize3 = data['prize3']
@@ -69,7 +77,44 @@
         day_img_2_prize3 = getImage(day_prize3[1])
         day_img_3_prize3 = getImage(day_prize3[2])
         day_img_4_prize3 = getImage(day_prize3[3])
+
+        temp_day = dayjs(data['nextdraw']+" 14:30:00").valueOf()
+        setInterval(function() {
+            let now = new Date().getTime();
+            let distance = temp_day - now;
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            temp_day_hour = hours
+            temp_day_minute = minutes
+            temp_day_second = seconds
+            if(hours < 10){
+                temp_day_hour = "0"+hours
+            }else{
+                temp_day_hour = hours
+            }
+            if(minutes < 10){
+                temp_day_minute = "0"+minutes
+            }else{
+                temp_day_minute = minutes
+            }
+            if(seconds < 10){
+                temp_day_second = "0"+seconds
+            }else{
+                temp_day_second = seconds
+            }
+            if (distance < 0) {
+                clearInterval();
+                temp_day_hour = "00"
+                temp_day_minute = "00"
+                temp_day_second = "00"
+            }
+        }, 1000)
     });
+    let temp_night = ""
+    let temp_night_hour = "00"
+    let temp_night_minute = "00"
+    let temp_night_second = "00"
     onValue(sdsb4dnight, (snapshot) => {
         const data = snapshot.val();
         night_date_draw = data['datedraw']
@@ -88,6 +133,36 @@
         night_img_2_prize3 = getImage(night_prize3[1])
         night_img_3_prize3 = getImage(night_prize3[2])
         night_img_4_prize3 = getImage(night_prize3[3])
+
+        temp_night = dayjs(data['nextdraw']+" 21:30:00").valueOf()
+        setInterval(function() {
+            let now = new Date().getTime();
+            let distance = temp_night - now;
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            if(hours < 10){
+                temp_night_hour = "0"+hours
+            }else{
+                temp_night_hour = hours
+            }
+            if(minutes < 10){
+                temp_night_minute = "0"+minutes
+            }else{
+                temp_night_minute = minutes
+            }
+            if(seconds < 10){
+                temp_night_second = "0"+seconds
+            }else{
+                temp_night_second = seconds
+            }
+            if (distance < 0) {
+            clearInterval();
+                temp_night_hour = "00"
+                temp_night_minute = "00"
+                temp_night_second = "00"
+            }
+        }, 1000)
     });
     function getImage(e){
         let urlimg = "";
@@ -116,9 +191,29 @@
         return urlimg;
     }
     
+    
+    
 </script>
 <div class="row">
     <div class="col-sm-6">
+        <table class="table">
+            <thead>
+                <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:white;">NEXT DRAWING</th>
+                </tr>
+                <tr style="background-color: #3e266d;">
+                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:white;">TIME</th>
+                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:white;">{day_date_draw}, 02.30PM</th>
+                </tr>
+            </thead>
+            <tbody style="border-top:none;">
+                <tr style="background-color: #f2f7f5;">
+                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_day_hour}</td>
+                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_day_minute}</td>
+                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_day_second}</td>
+                </tr>
+            </tbody>
+        </table>
         <table class="table">
             <thead>
                 <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
@@ -209,6 +304,24 @@
         </div>
     </div>
     <div class="col-sm-6">
+        <table class="table">
+            <thead>
+                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:black;">NEXT DRAWING</th>
+                </tr>
+                <tr style="background-color: #f9da7c;">
+                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:black;">TIME</th>
+                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:black;">{night_date_draw}, 21.30PM</th>
+                </tr>
+            </thead>
+            <tbody style="border-top:none;">
+                <tr style="background-color: #f2f7f5;">
+                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_night_hour}</td>
+                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_night_minute}</td>
+                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_night_second}</td>
+                </tr>
+            </tbody>
+        </table>
         <table class="table">
             <thead>
                 <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
