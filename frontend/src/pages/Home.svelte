@@ -17,6 +17,7 @@
     const db = getDatabase(app);
     const sdsb4dday = ref(db, 'sdsb4dday');
     const sdsb4dnight = ref(db, 'sdsb4dnight');
+    let size_image = "40"
     let day_date_draw = ""
     let day_prize1 = ""
     let day_prize2 = ""
@@ -75,18 +76,18 @@
         night_prize1 = data['prize1']
         night_prize2 = data['prize2']
         night_prize3 = data['prize3']
-        night_img_1_prize1 = getImage(day_prize1[0])
-        night_img_2_prize1 = getImage(day_prize1[1])
-        night_img_3_prize1 = getImage(day_prize1[2])
-        night_img_4_prize1 = getImage(day_prize1[3])
-        night_img_1_prize2 = getImage(day_prize2[0])
-        night_img_2_prize2 = getImage(day_prize2[1])
-        night_img_3_prize2 = getImage(day_prize2[2])
-        night_img_4_prize2 = getImage(day_prize2[3])
-        night_img_1_prize3 = getImage(day_prize3[0])
-        night_img_2_prize3 = getImage(day_prize3[1])
-        night_img_3_prize3 = getImage(day_prize3[2])
-        night_img_4_prize3 = getImage(day_prize3[3])
+        night_img_1_prize1 = getImage(night_prize1[0])
+        night_img_2_prize1 = getImage(night_prize1[1])
+        night_img_3_prize1 = getImage(night_prize1[2])
+        night_img_4_prize1 = getImage(night_prize1[3])
+        night_img_1_prize2 = getImage(night_prize2[0])
+        night_img_2_prize2 = getImage(night_prize2[1])
+        night_img_3_prize2 = getImage(night_prize2[2])
+        night_img_4_prize2 = getImage(night_prize2[3])
+        night_img_1_prize3 = getImage(night_prize3[0])
+        night_img_2_prize3 = getImage(night_prize3[1])
+        night_img_3_prize3 = getImage(night_prize3[2])
+        night_img_4_prize3 = getImage(night_prize3[3])
     });
     function getImage(e){
         let urlimg = "";
@@ -120,57 +121,57 @@
     <div class="col-sm-6">
         <table class="table">
             <thead>
-                <tr style="background-color: #8bd3dd;border-style: none;border-bottom-color: #8bd3dd;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px">SDSB4D DAY</th>
+                <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:white;">SDSB4D DAY</th>
                 </tr>
-                <tr style="background-color: #8bd3dd;">
-                    <th width="*" style="text-align: left;vertical-align:top;font-size:15px;">CURRENT DRAW</th>
-                    <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;">{day_date_draw}, 02.30PM</th>
+                <tr style="background-color: #3e266d;">
+                    <th width="*" style="text-align: left;vertical-align:top;font-size:15px;color:white;">CURRENT DRAW</th>
+                    <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;color:white;">{day_date_draw}, 02.30PM</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="border-top:none;">
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;">1st Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
-                        <img width="50" src="{day_img_1_prize1}" alt="">
-                        <img width="50" src="{day_img_2_prize1}" alt="">
-                        <img width="50" src="{day_img_3_prize1}" alt="">
-                        <img width="50" src="{day_img_4_prize1}" alt="">
+                        <img width="{size_image}" src="{day_img_1_prize1}" alt="">
+                        <img width="{size_image}" src="{day_img_2_prize1}" alt="">
+                        <img width="{size_image}" src="{day_img_3_prize1}" alt="">
+                        <img width="{size_image}" src="{day_img_4_prize1}" alt="">
                     </td>
                 </tr>
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">2nd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
-                        <img width="50" src="{day_img_1_prize2}" alt="">
-                        <img width="50" src="{day_img_2_prize2}" alt="">
-                        <img width="50" src="{day_img_3_prize2}" alt="">
-                        <img width="50" src="{day_img_4_prize2}" alt="">
+                        <img width="{size_image}" src="{day_img_1_prize2}" alt="">
+                        <img width="{size_image}" src="{day_img_2_prize2}" alt="">
+                        <img width="{size_image}" src="{day_img_3_prize2}" alt="">
+                        <img width="{size_image}" src="{day_img_4_prize2}" alt="">
                     </td>
                 </tr>
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">3rd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
-                        <img width="50" src="{day_img_1_prize3}" alt="">
-                        <img width="50" src="{day_img_2_prize3}" alt="">
-                        <img width="50" src="{day_img_3_prize3}" alt="">
-                        <img width="50" src="{day_img_4_prize3}" alt="">
+                        <img width="{size_image}" src="{day_img_1_prize3}" alt="">
+                        <img width="{size_image}" src="{day_img_2_prize3}" alt="">
+                        <img width="{size_image}" src="{day_img_3_prize3}" alt="">
+                        <img width="{size_image}" src="{day_img_4_prize3}" alt="">
                     </td>
                 </tr>
             </tbody>
         </table>
         <table class="table">
             <thead>
-                <tr style="background-color: #8bd3dd;border-style: none;border-bottom-color: #8bd3dd;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;">LATEST RESULT</th>
+                <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;color:white;">LATEST RESULT</th>
                 </tr>
-                <tr style="background-color: #8bd3dd;">
-                    <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;">DATE</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 1</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 2</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 3</th>
+                <tr style="background-color: #3e266d;">
+                    <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;color:white;">DATE</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:white;">PRIZE 1</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:white;">PRIZE 2</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:white;">PRIZE 3</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="border-top:none;">
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
                     <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
@@ -204,63 +205,63 @@
             </tbody>
         </table>
         <div class="d-grid">
-            <button type="button" class="btn btn-warning" style="background-color: #8bd3dd;border-color: #8bd3dd;">ALL RESULT</button>
+            <button type="button" class="btn btn-warning" style="background-color: #3e266d;border-color: #3e266d;">ALL RESULT</button>
         </div>
     </div>
     <div class="col-sm-6">
         <table class="table">
             <thead>
-                <tr style="background-color: #fe98a3;border-style: none;border-bottom-color: #fe98a3;">
+                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
                     <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px">SDSB4D NIGHT</th>
                 </tr>
-                <tr style="background-color: #fe98a3;">
+                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
                     <th width="*" style="text-align: left;vertical-align:top;font-size:15px;">CURRENT DRAW</th>
                     <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;">{night_date_draw}, 21.30pm</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="border-top:none;">
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;">1st Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
-                        <img width="50" src="{night_img_1_prize1}" alt="">
-                        <img width="50" src="{night_img_2_prize1}" alt="">
-                        <img width="50" src="{night_img_3_prize1}" alt="">
-                        <img width="50" src="{night_img_4_prize1}" alt="">
+                        <img width="{size_image}" src="{night_img_1_prize1}" alt="">
+                        <img width="{size_image}" src="{night_img_2_prize1}" alt="">
+                        <img width="{size_image}" src="{night_img_3_prize1}" alt="">
+                        <img width="{size_image}" src="{night_img_4_prize1}" alt="">
                     </td>
                 </tr>
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">2nd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
-                        <img width="50" src="{night_img_1_prize2}" alt="">
-                        <img width="50" src="{night_img_2_prize2}" alt="">
-                        <img width="50" src="{night_img_3_prize2}" alt="">
-                        <img width="50" src="{night_img_4_prize2}" alt="">
+                        <img width="{size_image}" src="{night_img_1_prize2}" alt="">
+                        <img width="{size_image}" src="{night_img_2_prize2}" alt="">
+                        <img width="{size_image}" src="{night_img_3_prize2}" alt="">
+                        <img width="{size_image}" src="{night_img_4_prize2}" alt="">
                     </td>
                 </tr>
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">3rd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
-                        <img width="50" src="{night_img_1_prize3}" alt="">
-                        <img width="50" src="{night_img_2_prize3}" alt="">
-                        <img width="50" src="{night_img_3_prize3}" alt="">
-                        <img width="50" src="{night_img_4_prize3}" alt="">
+                        <img width="{size_image}" src="{night_img_1_prize3}" alt="">
+                        <img width="{size_image}" src="{night_img_2_prize3}" alt="">
+                        <img width="{size_image}" src="{night_img_3_prize3}" alt="">
+                        <img width="{size_image}" src="{night_img_4_prize3}" alt="">
                     </td>
                 </tr>
             </tbody>
         </table>
         <table class="table">
             <thead>
-                <tr style="background-color: #fe98a3;border-style: none;border-bottom-color: #fe98a3;">
+                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
                     <th colspan="4" style="text-align: center;vertical-align: top;">LATEST RESULT</th>
                 </tr>
-                <tr style="background-color: #fe98a3;">
+                <tr style="background-color: #f9da7c;">
                     <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;">DATE</th>
                     <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 1</th>
                     <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 2</th>
                     <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 3</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="border-top:none;">
                 <tr style="background-color: #f2f7f5;">
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
                     <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
@@ -294,7 +295,7 @@
             </tbody>
         </table>
         <div class="d-grid">
-            <button type="button" class="btn btn-danger">ALL RESULT</button>
+            <button type="button" class="btn btn-danger" style="background-color: #f9da7c;border-color:#f9da7c;color:black;">ALL RESULT</button>
         </div>
     </div>
 </div>

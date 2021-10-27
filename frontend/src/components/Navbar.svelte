@@ -34,12 +34,12 @@
                 on:click={() => {
                     handlePopup();
                 }}  
-                type="button" class="btn btn-info me-2">Login</button>
+                type="button" class="btn btn-info me-2" style="background-color: #e91e65;border-color:#e91e65;">Login</button>
             <button
                 on:click={() => {
                     handlePopup();
                 }} 
-                type="button" class="btn btn-info">Sign-up</button>
+                type="button" class="btn btn-info" style="background-color: #e91e65;border-color:#e91e65;">Sign-up</button>
         </div>
     </header>
 </div>
