@@ -17,6 +17,7 @@
     const db = getDatabase(app);
     const sdsb4dday = ref(db, 'sdsb4dday');
     const sdsb4dnight = ref(db, 'sdsb4dnight');
+    let listsdsbday = [];
     let size_image = "40"
     let size_clock = "50"
     let day_date_draw = ""
@@ -191,8 +192,42 @@
         return urlimg;
     }
     
-    
-    
+    async function initSDSB4DDAY() {
+        const resPasar = await fetch("/api/listsdsbday", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+            }),
+        });
+        if (!resPasar.ok) {
+            const pasarMessage = `An error has occured: ${resPasar.status}`;
+            throw new Error(pasarMessage);
+        } else {
+            const jsonPasar = await resPasar.json();
+            if (jsonPasar.status == 200) {
+            let record = jsonPasar.record;
+            if (record != null) {
+                for (var i = 0; i < 5; i++) {
+                listsdsbday = [
+                    ...listsdsbday,{
+                        sdsbday_date: record[i]["sdsbday_date"],
+                        sdsbday_prize1: record[i]["sdsbday_prize1"],
+                        sdsbday_prize2: record[i]["sdsbday_prize2"],
+                        sdsbday_prize3: record[i]["sdsbday_prize3"]
+                    },
+                ];
+                }
+            } else {
+                alert("Error");
+            }
+            } else {
+            alert("Error");
+            }
+        }
+    }
+    initSDSB4DDAY()
 </script>
 <div class="row">
     <div class="col-sm-6">
@@ -267,36 +302,14 @@
                 </tr>
             </thead>
             <tbody style="border-top:none;">
+                {#each listsdsbday as rec }
                 <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
+                    <td style="text-align: center;vertical-align:top;font-size: 15px;">{rec.sdsbday_date}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize1}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize2}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize3}</td>
                 </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
+                {/each}
             </tbody>
         </table>
         <div class="d-grid">
@@ -375,36 +388,14 @@
                 </tr>
             </thead>
             <tbody style="border-top:none;">
+                {#each listsdsbday as rec }
                 <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
+                    <td style="text-align: center;vertical-align:top;font-size: 15px;">{rec.sdsbday_date}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize1}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize2}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbday_prize3}</td>
                 </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">2021-10-27</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">1234</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">4321</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">9821</td>
-                </tr>
+                {/each}
             </tbody>
         </table>
         <div class="d-grid">
