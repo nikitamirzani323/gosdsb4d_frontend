@@ -22,8 +22,10 @@
 </script>
 
 <Navbar />
-<div class="container" style="margin-top: 40px;">
-	<Home />
+<div class="contentmodif">
+	<div class="container" style="margin-top: 20px;">
+		<Home />
+	</div>
 </div>
 <div class="clear-fix"></div><br>
 <Footer />
