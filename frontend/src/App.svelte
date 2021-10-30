@@ -1,8 +1,10 @@
 <script>
 	
 	import Navbar from "./components/Navbar.svelte"
+	import Navbar_mobile from "./components/Navbar_mobile.svelte"
 	import Footer from "./components/Footer.svelte"
 	import Home from "./pages/Home.svelte"
+	import Home_mobile from "./pages/Home_mobile.svelte"
 	
 	let client_device = "";
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -12,9 +14,10 @@
     	client_device = "WEBSITE";
 	}
 
-	
+	console.log(client_device)
 </script>
 
+{#if client_device == "WEBSITE"}
 <Navbar />
 <div class="contentmodif" style="margin-top: -10px;">
 	<div class="clearfix"></div><br>
@@ -24,7 +27,6 @@
 	<div class="clearfix"></div><br>
 </div>
 <Footer />
-
 <style>
 	.container {
 		width: 1000px;
@@ -39,3 +41,7 @@
         background-repeat:no-repeat;
 	}
 </style>
+{:else}
+<Navbar_mobile />
+<Home_mobile />
+{/if}

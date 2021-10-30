@@ -380,11 +380,11 @@
                 <table class="table">
                     <thead>
                         <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
-                            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:black;">NEXT DRAWING</th>
+                            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;">NEXT DRAWING</th>
                         </tr>
                         <tr style="background-color: #f9da7c;">
-                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:black;">TIME</th>
-                            <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:black;">{night_next_draw}, 21.30PM</th>
+                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;">TIME</th>
+                            <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;">{night_next_draw}, 21.30PM</th>
                         </tr>
                     </thead>
                 </table>
@@ -481,7 +481,6 @@
 </div>
 <div class="clearfix"></div><br>
 <style>
-  
     .countdownBox {
         border: 3px #007dc9 solid;
         color: #007dc9;
