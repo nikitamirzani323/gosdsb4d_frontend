@@ -268,26 +268,45 @@
     initSDSB4DDAY()
     initSDSB4DNIGHT()
 </script>
-<div class="row">
+<br>
+<div class="row" style="margin-top:-10px;">
     <div class="col-sm-6">
-        <table class="table">
-            <thead>
-                <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:white;">NEXT DRAWING</th>
-                </tr>
-                <tr style="background-color: #3e266d;">
-                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:white;">TIME</th>
-                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:white;">{day_next_draw}, 02.30PM</th>
-                </tr>
-            </thead>
-            <tbody style="border-top:none;">
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_day_hour}</td>
-                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_day_minute}</td>
-                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_day_second}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="card" style="padding:0px;margin:0px;background-color:none;border:none;">
+            <div class="card-header" style="padding: 0px;margin:0px;background-color:none;">
+                <table class="table">
+                    <thead>
+                        <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
+                            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:white;">NEXT DRAWING</th>
+                        </tr>
+                        <tr style="background-color: #3e266d;">
+                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:white;">TIME</th>
+                            <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:white;">{day_next_draw}, 02.30PM</th>
+                        </tr>
+                    </thead>
+                </table>
+              </div>
+            <div class="card-body" style="margin: 0px;padding:5px;">
+                <div class="row" style="margin-top:-20px;">
+                    <div class="col-sm-4">
+                        <span class="countdownBox">
+                            {temp_day_hour}
+                        </span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="countdownBox">
+                            {temp_day_minute}
+                        </span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="countdownBox">
+                            {temp_day_second}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div><br>
+        <div class="clearfix"></div>
         <table class="table">
             <thead>
                 <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
@@ -356,24 +375,41 @@
         </div>
     </div>
     <div class="col-sm-6">
-        <table class="table">
-            <thead>
-                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:black;">NEXT DRAWING</th>
-                </tr>
-                <tr style="background-color: #f9da7c;">
-                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:black;">TIME</th>
-                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:black;">{night_next_draw}, 21.30PM</th>
-                </tr>
-            </thead>
-            <tbody style="border-top:none;">
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_night_hour}</td>
-                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_night_minute}</td>
-                    <td style="text-align: center;vertical-align:middle;font-size: {size_clock}px;">{temp_night_second}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="card" style="padding:0px;margin:0px;background-color:none;border:none;">
+            <div class="card-header" style="padding: 0px;margin:0px;background-color:none;">
+                <table class="table">
+                    <thead>
+                        <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
+                            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:black;">NEXT DRAWING</th>
+                        </tr>
+                        <tr style="background-color: #f9da7c;">
+                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:black;">TIME</th>
+                            <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:black;">{night_next_draw}, 21.30PM</th>
+                        </tr>
+                    </thead>
+                </table>
+              </div>
+            <div class="card-body" style="margin: 0px;padding:5px;">
+                <div class="row" style="margin-top:-20px;">
+                    <div class="col-sm-4">
+                        <span class="countdownBox2">
+                            {temp_night_hour}
+                        </span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="countdownBox2">
+                            {temp_night_minute}
+                        </span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="countdownBox2">
+                            {temp_night_second}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div><br>
         <table class="table">
             <thead>
                 <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
@@ -442,3 +478,24 @@
         </div>
     </div>
 </div>
+<style>
+  
+    .countdownBox {
+        border: 3px #007dc9 solid;
+        color: #007dc9;
+        padding: 10px;
+        text-align: center;
+        display: block;
+        font-size: 30px;
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    }
+    .countdownBox2 {
+        border: 3px #f9da7c solid;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        display: block;
+        font-size: 30px;
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    }
+</style>

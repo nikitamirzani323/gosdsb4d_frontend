@@ -6,12 +6,4 @@ body {
     line-height: 1.5;
     background: white;
 }
-.container {
-    width: 1000px;
-    max-width: none !important;
-}
-.contentmodif{
-    background-image: url('https://i.ibb.co/vZpPWtJ/Lottery-balls-isolated-on-orange-background.jpg');
-        background-position:center center;
-        background-repeat:no-repeat;
-}
+

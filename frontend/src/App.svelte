@@ -4,10 +4,6 @@
 	import Footer from "./components/Footer.svelte"
 	import Home from "./pages/Home.svelte"
 	
-	
-
-	
-	
 	let client_device = "";
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     	// true for mobile device
@@ -17,15 +13,29 @@
 	}
 
 	
-	let css_loader = "display: none;";
-    let msgloader = "";
 </script>
 
 <Navbar />
-<div class="contentmodif">
-	<div class="container" style="margin-top: 20px;">
+<div class="contentmodif" style="margin-top: -10px;">
+	<div class="clearfix"></div><br>
+	<div class="container content">
 		<Home />
 	</div>
+	<div class="clearfix"></div><br>
 </div>
-<div class="clear-fix"></div><br>
 <Footer />
+
+<style>
+	.container {
+		width: 1000px;
+		max-width: none !important;
+	}
+	.content{
+		background-color: rgba(44, 31, 58, 0.5);
+	}
+	.contentmodif{
+    	background-image: url('https://i.ibb.co/vZpPWtJ/Lottery-balls-isolated-on-orange-background.jpg');
+        background-position:center center;
+        background-repeat:no-repeat;
+	}
+</style>
