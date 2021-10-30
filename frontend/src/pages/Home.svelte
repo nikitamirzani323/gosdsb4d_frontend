@@ -477,7 +477,9 @@
             <button type="button" class="btn btn-danger" style="background-color: #f9da7c;border-color:#f9da7c;color:black;">ALL RESULT</button>
         </div>
     </div>
+   
 </div>
+<div class="clearfix"></div><br>
 <style>
   
     .countdownBox {
