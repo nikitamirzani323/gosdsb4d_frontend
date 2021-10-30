@@ -273,21 +273,21 @@
     <div class="col-sm-6">
         <div class="card" style="padding:0px;margin:0px;background-color:none;border:none;">
             <div class="card-header" style="padding: 0px;margin:0px;background-color:none;">
-                <table class="table">
+                <table class="table" style="margin-bottom: -5px;">
                     <thead>
-                        <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
-                            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:white;">NEXT DRAWING</th>
+                        <tr style="background-color: #4ec3dd;border-style: none;border-bottom-color: #4ec3dd;">
+                            <th colspan="2" style="text-align: center;vertical-align: top;font-size: 30px;color:#545254;">NEXT DRAWING</th>
                         </tr>
-                        <tr style="background-color: #3e266d;">
-                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:white;">TIME</th>
-                            <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:white;">{day_next_draw}, 02.30PM</th>
+                        <tr style="background-color: #4ec3dd;">
+                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:#545254;">TIME</th>
+                            <th NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:#545254;">{day_next_draw}, 02.30PM</th>
                         </tr>
                     </thead>
                 </table>
               </div>
-            <div class="card-body" style="margin: 0px;padding:5px;">
-                <div class="row" style="margin-top:-20px;">
-                    <div class="col-sm-4">
+            <div class="card-body" style="margin: 0px;padding:5px;background-color: #4ec3dd;">
+                <div class="row" style="margin-top:0px;">
+                    <div class="col-sm-4" >
                         <span class="countdownBox">
                             {temp_day_hour}
                         </span>
@@ -306,19 +306,18 @@
             </div>
         </div>
         <div class="clearfix"></div><br>
-        <div class="clearfix"></div>
-        <table class="table">
+        <table class="table" >
             <thead>
-                <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:white;">SDSB4D DAY</th>
+                <tr style="background-color: #4ec3dd;border-style: none;border-bottom-color: #4ec3dd;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:#545254;">SDSB4D DAY</th>
                 </tr>
-                <tr style="background-color: #3e266d;">
-                    <th width="*" style="text-align: left;vertical-align:top;font-size:15px;color:white;">CURRENT DRAW</th>
-                    <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;color:white;">{day_date_draw}, 02.30PM</th>
+                <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
+                    <th width="*" style="text-align: left;vertical-align:top;font-size:15px;color:#545254;">CURRENT DRAW</th>
+                    <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;color:#545254;">{day_date_draw}, 02.30PM</th>
                 </tr>
             </thead>
-            <tbody style="border-top:none;">
-                <tr style="background-color: #f2f7f5;">
+            <tbody style="border-top:none;border-bottom-color: #4ec3dd;">
+                <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
                     <td style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;">1st Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{day_img_1_prize1}" alt="">
@@ -327,7 +326,7 @@
                         <img width="{size_image}" src="{day_img_4_prize1}" alt="">
                     </td>
                 </tr>
-                <tr style="background-color: #f2f7f5;">
+                <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">2nd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{day_img_1_prize2}" alt="">
@@ -336,7 +335,7 @@
                         <img width="{size_image}" src="{day_img_4_prize2}" alt="">
                     </td>
                 </tr>
-                <tr style="background-color: #f2f7f5;">
+                <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">3rd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{day_img_1_prize3}" alt="">
@@ -349,14 +348,14 @@
         </table>
         <table class="table">
             <thead>
-                <tr style="background-color: #3e266d;border-style: none;border-bottom-color: #3e266d;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;color:white;">LATEST RESULT</th>
+                <tr style="background-color: #4ec3dd;border-style: none;border-bottom-color: #4ec3dd;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;color:#545254;">LATEST RESULT</th>
                 </tr>
-                <tr style="background-color: #3e266d;">
-                    <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;color:white;">DATE</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:white;">PRIZE 1</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:white;">PRIZE 2</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:white;">PRIZE 3</th>
+                <tr style="background-color: #4ec3dd;">
+                    <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;color:#545254;">DATE</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 1</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 2</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 3</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
@@ -371,26 +370,26 @@
             </tbody>
         </table>
         <div class="d-grid">
-            <button type="button" class="btn btn-warning" style="background-color: #3e266d;border-color: #3e266d;">ALL RESULT</button>
+            <button type="button" class="btn btn-warning" style="background-color: #4ec3dd;border-color: #4ec3dd;color:#545254;">ALL RESULT</button>
         </div>
     </div>
     <div class="col-sm-6">
         <div class="card" style="padding:0px;margin:0px;background-color:none;border:none;">
             <div class="card-header" style="padding: 0px;margin:0px;background-color:none;">
-                <table class="table">
+                <table class="table" style="margin-bottom: -5px;">
                     <thead>
-                        <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
-                            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;">NEXT DRAWING</th>
+                        <tr style="background-color: #e4ad68;border-style: none;border-bottom-color: #e4ad68;">
+                            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:#545254;">NEXT DRAWING</th>
                         </tr>
-                        <tr style="background-color: #f9da7c;">
-                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;">TIME</th>
-                            <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;">{night_next_draw}, 21.30PM</th>
+                        <tr style="background-color: #e4ad68;">
+                            <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:#545254;">TIME</th>
+                            <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:#545254;">{night_next_draw}, 21.30PM</th>
                         </tr>
                     </thead>
                 </table>
               </div>
-            <div class="card-body" style="margin: 0px;padding:5px;">
-                <div class="row" style="margin-top:-20px;">
+            <div class="card-body" style="margin: 0px;padding:5px;background-color:#e4ad68;">
+                <div class="row" style="margin-top:0px;">
                     <div class="col-sm-4">
                         <span class="countdownBox2">
                             {temp_night_hour}
@@ -412,17 +411,17 @@
         <div class="clearfix"></div><br>
         <table class="table">
             <thead>
-                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px">SDSB4D NIGHT</th>
+                <tr style="background-color: #e4ad68;border-style: none;border-bottom-color: #e4ad68;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:#545254;">SDSB4D NIGHT</th>
                 </tr>
-                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
-                    <th width="*" style="text-align: left;vertical-align:top;font-size:15px;">CURRENT DRAW</th>
-                    <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;">{night_date_draw}, 21.30pm</th>
+                <tr style="background-color: #e4ad68;border-style: none;border-bottom-color: #e4ad68;">
+                    <th width="*" style="text-align: left;vertical-align:top;font-size:15px;color:#545254;">CURRENT DRAW</th>
+                    <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;color:#545254;">{night_date_draw}, 21.30pm</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;">1st Prize</td>
+                <tr style="background-color: #e4ad68;border-bottom-color: #e4ad68;">
+                    <td style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;color:#545254;">1st Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{night_img_1_prize1}" alt="">
                         <img width="{size_image}" src="{night_img_2_prize1}" alt="">
@@ -430,8 +429,8 @@
                         <img width="{size_image}" src="{night_img_4_prize1}" alt="">
                     </td>
                 </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">2nd Prize</td>
+                <tr style="background-color: #e4ad68;border-bottom-color: #e4ad68;">
+                    <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:#545254;">2nd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{night_img_1_prize2}" alt="">
                         <img width="{size_image}" src="{night_img_2_prize2}" alt="">
@@ -439,8 +438,8 @@
                         <img width="{size_image}" src="{night_img_4_prize2}" alt="">
                     </td>
                 </tr>
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;">3rd Prize</td>
+                <tr style="background-color: #e4ad68;border-bottom-color: #e4ad68;">
+                    <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:#545254;">3rd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{night_img_1_prize3}" alt="">
                         <img width="{size_image}" src="{night_img_2_prize3}" alt="">
@@ -452,29 +451,29 @@
         </table>
         <table class="table">
             <thead>
-                <tr style="background-color: #f9da7c;border-style: none;border-bottom-color: #f9da7c;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;">LATEST RESULT</th>
+                <tr style="background-color: #e4ad68;border-style: none;border-bottom-color: #e4ad68;">
+                    <th colspan="4" style="text-align: center;vertical-align: top;color:#545254;">LATEST RESULT</th>
                 </tr>
-                <tr style="background-color: #f9da7c;">
-                    <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;">DATE</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 1</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 2</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;">PRIZE 3</th>
+                <tr style="background-color: #e4ad68;">
+                    <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;color:#545254;">DATE</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 1</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 2</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 3</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
                 {#each listsdsbnight as rec }
-                <tr style="background-color: #f2f7f5;">
-                    <td style="text-align: center;vertical-align:top;font-size: 15px;">{rec.sdsbnight_date}</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbnight_prize1}</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbnight_prize2}</td>
-                    <td style="text-align: right;vertical-align:top;font-size: 15px;">{rec.sdsbnight_prize3}</td>
+                <tr style="background-color: #fcf9fb;">
+                    <td style="text-align: center;vertical-align:top;font-size: 15px;color:#545254;">{rec.sdsbnight_date}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">{rec.sdsbnight_prize1}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">{rec.sdsbnight_prize2}</td>
+                    <td style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">{rec.sdsbnight_prize3}</td>
                 </tr>
                 {/each}
             </tbody>
         </table>
         <div class="d-grid">
-            <button type="button" class="btn btn-danger" style="background-color: #f9da7c;border-color:#f9da7c;color:black;">ALL RESULT</button>
+            <button type="button" class="btn btn-danger" style="background-color: #e4ad68;border-color:#e4ad68;color:black;">ALL RESULT</button>
         </div>
     </div>
    
@@ -482,21 +481,21 @@
 <div class="clearfix"></div><br>
 <style>
     .countdownBox {
-        border: 3px #007dc9 solid;
-        color: #007dc9;
-        padding: 10px;
+        border: 3px #4ec3dd solid;
+        color: #545254;
+        padding: 5px;
         text-align: center;
         display: block;
-        font-size: 30px;
+        font-size: 40px;
         box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     }
     .countdownBox2 {
-        border: 3px #f9da7c solid;
-        color: black;
-        padding: 10px;
+        border: 3px #e4ad68 solid;
+        color: #545254;
+        padding: 5px;
         text-align: center;
         display: block;
-        font-size: 30px;
+        font-size: 40px;
         box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     }
 </style>

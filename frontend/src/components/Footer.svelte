@@ -1,6 +1,15 @@
+<script>
+	export let client_device = "WEBSITE";
+	let font_size = "";
+	if(client_device == "WEBSITE"){
+		font_size = "15px";
+	}else{
+		font_size = "13px";
+	}
+</script>
 <footer class="footer mt-auto py-3 bg-light" style="background-color: #f2f7f5;">
 	<div class="container">
-		<center>
+		<center style="color:#545254;font-size:{font_size}">
 			<p>
 				Players must be 18 years old. If you do not have control, gambling may be harmful. Please, play with responsibility.
 				All efforts will be made to ensure accuracy of the prizes, winnings and other information posted on sdsb4d.com. Official Winning Numbers are those that are selected in the respective drawings and are controlled by an independent accounting firm.

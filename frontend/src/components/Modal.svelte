@@ -7,10 +7,10 @@
     export let modal_footer = false
 </script>
 
-<div class="modal fade" id={modal_id} tabindex="-1" data-bs-backdrop="false">
-	<div class="modal-dialog {modal_size}">
-		<div class="modal-content" style="border-radius: 0px;">
-			<div class="modal-header">
+<div class="modal fade" id={modal_id} tabindex="-1" data-bs-backdrop="false" >
+	<div class="modal-dialog {modal_size}" style="">
+		<div class="modal-content" style="border-radius: 0px;background-color:#282325;border:none;">
+			<div class="modal-header" style="border:none;">
 				<h5 class="modal-title" id="exampleModalLabel">{modal_title}</h5>
 				<button
 					type="button"

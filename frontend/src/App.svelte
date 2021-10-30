@@ -26,7 +26,7 @@
 	</div>
 	<div class="clearfix"></div><br>
 </div>
-<Footer />
+<Footer {client_device} />
 <style>
 	.container {
 		width: 1000px;
@@ -36,12 +36,15 @@
 		background-color: rgba(44, 31, 58, 0.5);
 	}
 	.contentmodif{
-    	background-image: url('https://i.ibb.co/vZpPWtJ/Lottery-balls-isolated-on-orange-background.jpg');
+    	background-image: url('background.jpg');
         background-position:center center;
         background-repeat:no-repeat;
 	}
 </style>
 {:else}
 <Navbar_mobile />
-<Home_mobile />
+<div class="container" style="margin-top: 65px;">
+	<Home_mobile />
+</div>
+<Footer {client_device} />
 {/if}
