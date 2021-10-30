@@ -33,7 +33,7 @@
 		max-width: none !important;
 	}
 	.content{
-		background-color: rgba(44, 31, 58, 0.5);
+		background-color: rgba(233, 154, 0, 0.5);
 	}
 	.contentmodif{
     	background-image: url('background.jpg');

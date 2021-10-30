@@ -7,7 +7,7 @@
         myModal.show();
     };
 </script>
-  <nav class="navbar navbar-expand-lg navbar-light " style="height:50px;background-color:#f2d8a3;">
+  <nav class="navbar navbar-expand-lg navbar-light " style="height:50px;background-color:#ffcc01;">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img style="margin-top:-3px;" src="logo.png" alt="" />

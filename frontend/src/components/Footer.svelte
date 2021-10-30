@@ -7,7 +7,7 @@
 		font_size = "13px";
 	}
 </script>
-<footer class="footer mt-auto py-3" style="background-color: #f2d8a3;">
+<footer class="footer mt-auto py-3" style="background-color: #ffc400;">
 	<div class="container">
 		<center style="color:#545254;font-size:{font_size}">
 			<p>
