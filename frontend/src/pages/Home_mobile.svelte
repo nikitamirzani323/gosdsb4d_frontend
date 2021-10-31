@@ -1,6 +1,7 @@
 <script>
     import { initializeApp } from "firebase/app";
     import { getDatabase, ref, onValue } from "firebase/database";
+    import Modal from "../components/Modalcolor.svelte"
     import dayjs from "dayjs";
     const firebaseConfig = {
         apiKey: "AIzaSyCnjwV66P7jDLx5A0Hlh7CHKoZ2tg9jmMY",
@@ -212,7 +213,7 @@
             if (jsonPasar.status == 200) {
             let record = jsonPasar.record;
             if (record != null) {
-                for (var i = 0; i < 5; i++) {
+                for (var i = 0; i < record.length; i++) {
                 listsdsbday = [
                     ...listsdsbday,{
                         sdsbday_date: record[i]["sdsbday_date"],
@@ -247,7 +248,7 @@
             if (jsonPasar.status == 200) {
             let record = jsonPasar.record;
             if (record != null) {
-                for (var i = 0; i < 5; i++) {
+                for (var i = 0; i < record.length; i++) {
                 listsdsbnight = [
                     ...listsdsbnight,{
                         sdsbnight_date: record[i]["sdsbnight_date"],
@@ -265,8 +266,17 @@
             }
         }
     }
-    initSDSB4DDAY()
-    initSDSB4DNIGHT()
+    let myModalDay = "";
+    const handlePopupDay = () => {
+        initSDSB4DDAY()
+        myModalDay = new bootstrap.Modal(document.getElementById("modalday"));
+        myModalDay.show();
+    };
+    const handlePopupNight = () => {
+        initSDSB4DNIGHT()
+        myModalDay = new bootstrap.Modal(document.getElementById("modalnight"));
+        myModalDay.show();
+    };
 </script>
 <center>
     <button
@@ -274,21 +284,21 @@
     <button
         type="button" class="btn btn-info btn-sm" style="background-color: #e91e65;border-color:#e91e65;">Sign-up</button>
 </center>
-<div class="card" style="padding:0px;margin:0px;background-color:none;border:none;margin-top:10px;">
+<div class="card" style="padding:0px;margin:0px;background-color:#e91e65;border:none;margin-top:10px;">
     <div class="card-header" style="padding: 0px;margin:0px;background-color:none;">
         <table class="table" style="margin-bottom: -5px;">
             <thead>
-                <tr style="background-color: #4ec3dd;border-style: none;border-bottom-color: #4ec3dd;">
-                    <th colspan="2" style="text-align: center;vertical-align: top;font-size: 18px;color:#545254;">NEXT DRAWING</th>
+                <tr style="background-color: #e91e65;border-style: none;border-bottom-color: #e91e65;">
+                    <th colspan="2" style="text-align: center;vertical-align: top;font-size: 18px;color:white;">NEXT DRAWING</th>
                 </tr>
-                <tr style="background-color: #4ec3dd;">
-                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:#545254;">TIME</th>
-                    <th NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:#545254;">{day_next_draw}, 02.30PM</th>
+                <tr style="background-color: #e91e65;">
+                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:white;">TIME</th>
+                    <th NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:white;">{day_next_draw}, 02.30PM</th>
                 </tr>
             </thead>
         </table>
       </div>
-    <div class="card-body" style="margin: 0px;padding:5px;background-color: #4ec3dd;">
+    <div class="card-body" style="margin: 0px;padding:5px;background-color: #e91e65;">
         <div class="container">
             <div class="row align-items-center">
               <div class="col">
@@ -312,17 +322,35 @@
 </div>
 <table class="table" style="margin-top: 5px;">
     <thead>
-        <tr style="background-color: #4ec3dd;border-style: none;border-bottom-color: #4ec3dd;">
-            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:#545254;">SDSB4D DAY</th>
+        <tr style="background-color: #e91e65;border-style: none;border-bottom-color: #e91e65;">
+            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:white;">
+                <div class="float-end">
+                    <div class="dropdown">
+                        <svg style="cursor: pointer;" data-bs-toggle="dropdown" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <button
+                                    on:click={() => {
+                                        handlePopupDay();
+                                    }}  
+                                    class="dropdown-item" type="button">All Result</button></li>
+                        </ul>
+                    </div>
+                </div>
+                SDSB4D DAY
+            </th>
         </tr>
-        <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
-            <th width="*" style="text-align: left;vertical-align:top;font-size:13px;color:#545254;">CURRENT DRAW</th>
-            <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:13px;color:#545254;">{day_date_draw}, 02.30PM</th>
+        <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
+            <th width="*" style="text-align: left;vertical-align:top;font-size:13px;color:white;">CURRENT DRAW</th>
+            <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:13px;color:white;">{day_date_draw}, 02.30PM</th>
         </tr>
     </thead>
-    <tbody style="border-top:none;border-bottom-color: #4ec3dd;">
-        <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
-            <td style="text-align: center;vertical-align:middle;font-size: 15px;font-weight: bold;">1st Prize</td>
+    <tbody style="border-top:none;border-bottom-color: #e91e65;">
+        <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
+            <td style="text-align: center;vertical-align:middle;font-size: 15px;font-weight: bold;color:white;">1st Prize</td>
             <td style="text-align: center;vertical-align:top;">
                 <img width="{size_image}" src="{day_img_1_prize1}" alt="">
                 <img width="{size_image}" src="{day_img_2_prize1}" alt="">
@@ -330,8 +358,8 @@
                 <img width="{size_image}" src="{day_img_4_prize1}" alt="">
             </td>
         </tr>
-        <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
-            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;">2nd Prize</td>
+        <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
+            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;color:white;">2nd Prize</td>
             <td style="text-align: center;vertical-align:top;">
                 <img width="{size_image}" src="{day_img_1_prize2}" alt="">
                 <img width="{size_image}" src="{day_img_2_prize2}" alt="">
@@ -339,8 +367,8 @@
                 <img width="{size_image}" src="{day_img_4_prize2}" alt="">
             </td>
         </tr>
-        <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
-            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;">3rd Prize</td>
+        <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
+            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;color:white;">3rd Prize</td>
             <td style="text-align: center;vertical-align:top;">
                 <img width="{size_image}" src="{day_img_1_prize3}" alt="">
                 <img width="{size_image}" src="{day_img_2_prize3}" alt="">
@@ -389,7 +417,25 @@
 <table class="table" style="margin-top: 5px;">
     <thead>
         <tr style="background-color: #fee54e;border-style: none;border-bottom-color: #fee54e;">
-            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:#545254;">SDSB4D NIGHT</th>
+            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:#545254;">
+                <div class="float-end">
+                    <div class="dropdown">
+                        <svg style="cursor: pointer;" data-bs-toggle="dropdown" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <button
+                                    on:click={() => {
+                                        handlePopupNight();
+                                    }}  
+                                    class="dropdown-item" type="button">All Result</button></li>
+                        </ul>
+                    </div>
+                </div>
+                SDSB4D NIGHT
+            </th>
         </tr>
         <tr style="background-color: #fee54e;border-style: none;border-bottom-color: #fee54e;">
             <th width="*" style="text-align: left;vertical-align:top;font-size:13px;color:#545254;">CURRENT DRAW</th>
@@ -426,56 +472,74 @@
         </tr>
     </tbody>
 </table>
-<table class="table">
-    <thead>
-        <tr style="background-color: #4ec3dd;border-style: none;border-bottom-color: #4ec3dd;">
-            <th colspan="4" style="text-align: center;vertical-align: top;color:#545254;">LATEST RESULT</th>
-        </tr>
-        <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
-            <th width="*" style="text-align: center;vertical-align:top;font-size: 13px;color:#545254;">DATE</th>
-            <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 1</th>
-            <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 2</th>
-            <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 3</th>
-        </tr>
-    </thead>
-    <tbody style="border-top:none;">
-        {#each listsdsbday as rec }
-        <tr style="background-color: #4ec3dd;border-bottom-color: #4ec3dd;">
-            <td style="text-align: center;vertical-align:top;font-size: 13px;">{rec.sdsbday_date}</td>
-            <td style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbday_prize1}</td>
-            <td style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbday_prize2}</td>
-            <td style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbday_prize3}</td>
-        </tr>
-        {/each}
-    </tbody>
-</table>
-<table class="table">
-    <thead>
-        <tr style="background-color: #fee54e;border-style: none;border-bottom-color: #fee54e;">
-            <th colspan="4" style="text-align: center;vertical-align: top;color:#545254;">LATEST RESULT</th>
-        </tr>
-        <tr style="background-color: #fee54e;border-bottom-color: #fee54e;">
-            <th width="*" style="text-align: center;vertical-align:top;font-size: 13px;color:#545254;">DATE</th>
-            <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 1</th>
-            <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 2</th>
-            <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 3</th>
-        </tr>
-    </thead>
-    <tbody style="border-top:none;">
-        {#each listsdsbnight as rec }
-        <tr style="background-color: #fee54e;border-bottom-color: #fee54e;">
-            <td style="text-align: center;vertical-align:top;font-size: 13px;color:#545254;">{rec.sdsbnight_date}</td>
-            <td style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">{rec.sdsbnight_prize1}</td>
-            <td style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">{rec.sdsbnight_prize2}</td>
-            <td style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">{rec.sdsbnight_prize3}</td>
-        </tr>
-        {/each}
-    </tbody>
-</table>
+<Modal
+	modal_id="modalday"
+	modal_size="modal-dialog-centered"
+    modal_modal_css="background-color:#e91e65;"
+	modal_title="LAST RESULT"
+    modal_header_css="color:white;font-weight:bold;"
+    modal_body_css="height:400px;overflow-y: scroll;"
+    modal_footer_css="padding:5px;"
+	modal_footer={false}>
+	<slot:template slot="body">
+        <table class="table table-striped">
+            <thead>
+                <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
+                    <th width="*" style="text-align: center;vertical-align:top;font-size: 13px;color:#ffffff;">DATE</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#ffffff;">PRIZE 1</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#ffffff;">PRIZE 2</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#ffffff;">PRIZE 3</th>
+                </tr>
+            </thead>
+            <tbody style="border-top:none;">
+                {#each listsdsbday as rec }
+                <tr style="">
+                    <td NOWRAP style="text-align: center;vertical-align:top;font-size: 13px;color:#ffffff;">{rec.sdsbday_date}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;color:#ffffff;">{rec.sdsbday_prize1}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;color:#ffffff;">{rec.sdsbday_prize2}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;color:#ffffff;">{rec.sdsbday_prize3}</td>
+                </tr>
+                {/each}
+            </tbody>
+        </table>
+	</slot:template>
+</Modal>
+<Modal
+	modal_id="modalnight"
+	modal_size="modal-dialog-centered"
+    modal_modal_css="background-color:#fee54e;"
+	modal_title="LAST RESULT"
+    modal_header_css="color:#545254;font-weight:bold;"
+    modal_body_css="height:400px;overflow-y: scroll;"
+    modal_footer_css="padding:5px;"
+	modal_footer={false}>
+	<slot:template slot="body">
+        <table class="table table-striped">
+            <thead>
+                <tr style="background-color: #fee54e;border-bottom-color: #fee54e;">
+                    <th width="*" style="text-align: center;vertical-align:top;font-size: 13px;color:#545254;">DATE</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 1</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 2</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 1513pxpx;color:#545254;">PRIZE 3</th>
+                </tr>
+            </thead>
+            <tbody style="border-top:none;">
+                {#each listsdsbnight as rec }
+                <tr style="">
+                    <td NOWRAP style="text-align: center;vertical-align:top;font-size: 13px;">{rec.sdsbnight_date}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbnight_prize1}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbnight_prize2}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbnight_prize3}</td>
+                </tr>
+                {/each}
+            </tbody>
+        </table>
+	</slot:template>
+</Modal>
 <style>
     .countdownBox {
-        border: 3px #4ec3dd solid;
-        color: #545254;
+        border: 3px #e91e65 solid;
+        color: white;
         padding: 5px;
         text-align: center;
         display: block;

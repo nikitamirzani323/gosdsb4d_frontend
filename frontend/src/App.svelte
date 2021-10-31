@@ -26,6 +26,8 @@
 	</div>
 	<div class="clearfix"></div><br>
 </div>
+<div class="clearfix"></div>
+<br>
 <Footer {client_device} />
 <style>
 	.container {
@@ -33,6 +35,8 @@
 		max-width: none !important;
 	}
 	.content{
+		margin-top:30px;
+		border-radius:10px;
 		background-color: rgba(233, 154, 0, 0.5);
 	}
 	.contentmodif{
