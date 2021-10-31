@@ -383,11 +383,11 @@
         <table class="table" style="margin-bottom: -5px;">
             <thead>
                 <tr style="background-color: #ffd401;border-style: none;border-bottom-color: #ffd401;">
-                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:#545254;">NEXT DRAWING</th>
+                    <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:#020c13;">NEXT DRAWING</th>
                 </tr>
                 <tr style="background-color: #ffd401;">
-                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:#545254;">TIME</th>
-                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:#545254;">{night_next_draw}, 21.30PM</th>
+                    <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:#020c13;">TIME</th>
+                    <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:#020c13;">{night_next_draw}, 21.30PM</th>
                 </tr>
             </thead>
         </table>
@@ -417,7 +417,7 @@
 <table class="table" style="margin-top: 5px;">
     <thead>
         <tr style="background-color: #ffd401;border-style: none;border-bottom-color: #ffd401;">
-            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:#545254;">
+            <th colspan="4" style="text-align: center;vertical-align: top;font-size: 18px;color:#020c13;">
                 <div class="float-end">
                     <div class="dropdown">
                         <svg style="cursor: pointer;" data-bs-toggle="dropdown" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
@@ -438,13 +438,13 @@
             </th>
         </tr>
         <tr style="background-color: #ffd401;border-style: none;border-bottom-color: #ffd401;">
-            <th width="*" style="text-align: left;vertical-align:top;font-size:13px;color:#545254;">CURRENT DRAW</th>
-            <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:13px;color:#545254;">{night_date_draw}, 21.30pm</th>
+            <th width="*" style="text-align: left;vertical-align:top;font-size:13px;color:#020c13;">CURRENT DRAW</th>
+            <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:13px;color:#020c13;">{night_date_draw}, 21.30pm</th>
         </tr>
     </thead>
     <tbody style="border-top:none;">
         <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
-            <td style="text-align: center;vertical-align:middle;font-size: 15px;font-weight: bold;color:#545254;">1st Prize</td>
+            <td style="text-align: center;vertical-align:middle;font-size: 15px;font-weight: bold;color:#020c13;">1st Prize</td>
             <td style="text-align: center;vertical-align:top;">
                 <img width="{size_image}" src="{night_img_1_prize1}" alt="">
                 <img width="{size_image}" src="{night_img_2_prize1}" alt="">
@@ -453,7 +453,7 @@
             </td>
         </tr>
         <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
-            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;color:#545254;">2nd Prize</td>
+            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;color:#020c13;">2nd Prize</td>
             <td style="text-align: center;vertical-align:top;">
                 <img width="{size_image}" src="{night_img_1_prize2}" alt="">
                 <img width="{size_image}" src="{night_img_2_prize2}" alt="">
@@ -462,7 +462,7 @@
             </td>
         </tr>
         <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
-            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;color:#545254;">3rd Prize</td>
+            <td style="text-align: center;vertical-align:top;font-size: 15px;font-weight: bold;color:#020c13;">3rd Prize</td>
             <td style="text-align: center;vertical-align:top;">
                 <img width="{size_image}" src="{night_img_1_prize3}" alt="">
                 <img width="{size_image}" src="{night_img_2_prize3}" alt="">
@@ -509,7 +509,7 @@
 	modal_size="modal-dialog-centered"
     modal_modal_css="background-color:#ffd401;"
 	modal_title="LAST RESULT"
-    modal_header_css="color:#545254;font-weight:bold;"
+    modal_header_css="color:#020c13;font-weight:bold;"
     modal_body_css="height:400px;overflow-y: scroll;"
     modal_footer_css="padding:5px;"
 	modal_footer={false}>
@@ -517,19 +517,19 @@
         <table class="table table-striped">
             <thead>
                 <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
-                    <th width="*" style="text-align: center;vertical-align:top;font-size: 13px;color:#545254;">DATE</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 1</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#545254;">PRIZE 2</th>
-                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 1513pxpx;color:#545254;">PRIZE 3</th>
+                    <th width="*" style="text-align: center;vertical-align:top;font-size: 13px;color:#020c13;">DATE</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#020c13;">PRIZE 1</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 13px;color:#020c13;">PRIZE 2</th>
+                    <th width="25%" style="text-align: right;vertical-align:top;font-size: 1513pxpx;color:#020c13;">PRIZE 3</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
                 {#each listsdsbnight as rec }
                 <tr style="">
-                    <td NOWRAP style="text-align: center;vertical-align:top;font-size: 13px;">{rec.sdsbnight_date}</td>
-                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbnight_prize1}</td>
-                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbnight_prize2}</td>
-                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;">{rec.sdsbnight_prize3}</td>
+                    <td NOWRAP style="text-align: center;vertical-align:top;font-size: 13px;color:#020c13;">{rec.sdsbnight_date}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;color:#020c13;">{rec.sdsbnight_prize1}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;color:#020c13;">{rec.sdsbnight_prize2}</td>
+                    <td NOWRAP style="text-align: right;vertical-align:top;font-size: 13px;color:#020c13;">{rec.sdsbnight_prize3}</td>
                 </tr>
                 {/each}
             </tbody>
@@ -548,7 +548,7 @@
     }
     .countdownBox2 {
         border: 3px #ffd401 solid;
-        color: #545254;
+        color: #020c13;
         padding: 5px;
         text-align: center;
         display: block;

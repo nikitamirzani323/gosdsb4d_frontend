@@ -7,7 +7,7 @@
         myModal.show();
     };
 </script>
-  <nav class="navbar navbar-expand-lg navbar-light " style="height:50px;background-color:#ffcc01;">
+  <nav class="navbar navbar-expand-lg navbar-light " style="height:50px;background-color:#ffd401;">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img style="margin-top:-3px;" src="logo.png" alt="" />
@@ -18,21 +18,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#" style="color:#020c13;">Home</a>
             </li>
             <li class="nav-item">
               <a 
                   on:click={() => {
                       handlePopup();
                   }} 
-                  class="nav-link" href="#">Claim Prize</a>
+                  class="nav-link" href="#" style="color:#020c13;">Claim Prize</a>
             </li>
             <li class="nav-item">
               <a 
                   on:click={() => {
                       handlePopup();
                   }} 
-                  class="nav-link" href="#">About</a>
+                  class="nav-link" href="#" style="color:#020c13;">About</a>
             </li>
           </ul>
         </div>

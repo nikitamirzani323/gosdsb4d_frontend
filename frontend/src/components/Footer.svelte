@@ -13,10 +13,10 @@
 		img_size_mastercard = "";
 	}
 </script>
-<footer class="footer mt-auto py-3" style="background-color: #ffc400;">
+<footer class="footer mt-auto py-3" style="background-color: #ffd401;">
 	<div class="container">
 		<center>
-			<span style="color:#545254;font-size:{font_size}">We accept these payment method</span><br>
+			<span style="color:#020c13;font-size:{font_size}">We accept these payment method</span><br>
 			<img width="{img_size_visa}" src="visa.svg" alt="">
 			<img width="{img_size_mastercard}" src="mastercard.svg" alt="">
 			<img width="{img_size}" src="paypal.svg" alt="">
@@ -24,7 +24,7 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-9">
-				<center style="color:#545254;font-size:{font_size}">
+				<center style="color:#020c13;font-size:{font_size}">
 					<p>
 						Players must be 18 years old. If you do not have control, gambling may be harmful. Please, play with responsibility.
 						All efforts will be made to ensure accuracy of the prizes, winnings and other information posted on sdsb4d.com. Official Winning Numbers are those that are selected in the respective drawings and are controlled by an independent accounting firm.
@@ -40,7 +40,7 @@
 			</div>
 		</div>
 		<div class="clearfix"></div> <br>
-		<center style="color:#545254;font-size:{font_size}">
+		<center style="color:#020c13;font-size:{font_size}">
 			Copyright © sdsb4d.com
 		</center>
 	</div>
