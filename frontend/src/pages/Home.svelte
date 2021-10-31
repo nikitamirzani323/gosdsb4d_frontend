@@ -383,17 +383,17 @@
             <div class="card-header" style="padding: 0px;margin:0px;background-color:none;">
                 <table class="table" style="margin-bottom: -5px;">
                     <thead>
-                        <tr style="background-color: #fee54e;border-style: none;border-bottom-color: #fee54e;">
+                        <tr style="background-color: #ffd401;border-style: none;border-bottom-color: #ffd401;">
                             <th colspan="4" style="text-align: center;vertical-align: top;font-size: 30px;color:#545254;">NEXT DRAWING</th>
                         </tr>
-                        <tr style="background-color: #fee54e;">
+                        <tr style="background-color: #ffd401;">
                             <th width="*" style="text-align: left;vertical-align:top;font-size:12px;color:#545254;">TIME</th>
                             <th colspan="2" NOWRAP style="text-align: right;vertical-align:top;font-size:12px;color:#545254;">{night_next_draw}, 21.30PM</th>
                         </tr>
                     </thead>
                 </table>
               </div>
-            <div class="card-body" style="margin: 0px;padding:5px;background-color:#fee54e;">
+            <div class="card-body" style="margin: 0px;padding:5px;background-color:#ffd401;">
                 <div class="row" style="margin-top:0px;">
                     <div class="col-sm-4">
                         <span class="countdownBox2">
@@ -416,7 +416,7 @@
         <div class="clearfix"></div><br>
         <table class="table">
             <thead>
-                <tr style="background-color: #fee54e;border-style: none;border-bottom-color: #fee54e;">
+                <tr style="background-color: #ffd401;border-style: none;border-bottom-color: #ffd401;">
                     <th colspan="2" style="text-align: center;vertical-align: top;font-size: 30px;color:#545254;">
                         <div class="float-end">
                             <div class="dropdown">
@@ -437,13 +437,13 @@
                         SDSB4D NIGHT
                     </th>
                 </tr>
-                <tr style="background-color: #fee54e;border-style: none;border-bottom-color: #fee54e;">
+                <tr style="background-color: #ffd401;border-style: none;border-bottom-color: #ffd401;">
                     <th width="*" style="text-align: left;vertical-align:top;font-size:15px;color:#545254;">CURRENT DRAW</th>
                     <th NOWRAP width="50%" style="text-align: right;vertical-align:top;font-size:15px;color:#545254;">{night_date_draw}, 21.30pm</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
-                <tr style="background-color: #fee54e;border-bottom-color: #fee54e;">
+                <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
                     <td style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;color:#545254;">1st Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{night_img_1_prize1}" alt="">
@@ -452,7 +452,7 @@
                         <img width="{size_image}" src="{night_img_4_prize1}" alt="">
                     </td>
                 </tr>
-                <tr style="background-color: #fee54e;border-bottom-color: #fee54e;">
+                <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:#545254;">2nd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{night_img_1_prize2}" alt="">
@@ -461,7 +461,7 @@
                         <img width="{size_image}" src="{night_img_4_prize2}" alt="">
                     </td>
                 </tr>
-                <tr style="background-color: #fee54e;border-bottom-color: #fee54e;">
+                <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
                     <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:#545254;">3rd Prize</td>
                     <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width="{size_image}" src="{night_img_1_prize3}" alt="">
@@ -510,7 +510,7 @@
 <Modal
 	modal_id="modalnight"
 	modal_size="modal-dialog-centered"
-    modal_modal_css="background-color:#fee54e;"
+    modal_modal_css="background-color:#ffd401;"
 	modal_title="LAST RESULT"
     modal_header_css="color:#545254;font-weight:bold;"
     modal_body_css="height:500px;overflow-y: scroll;"
@@ -519,7 +519,7 @@
 	<slot:template slot="body">
         <table class="table table-striped">
             <thead>
-                <tr style="background-color: #fee54e;border-bottom-color: #fee54e;">
+                <tr style="background-color: #ffd401;border-bottom-color: #ffd401;">
                     <th width="*" style="text-align: center;vertical-align:top;font-size: 15px;color:#545254;">DATE</th>
                     <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 1</th>
                     <th width="25%" style="text-align: right;vertical-align:top;font-size: 15px;color:#545254;">PRIZE 2</th>
@@ -550,7 +550,7 @@
         box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     }
     .countdownBox2 {
-        border: 3px #fee54e solid;
+        border: 3px #ffd401 solid;
         color: #545254;
         padding: 5px;
         text-align: center;
