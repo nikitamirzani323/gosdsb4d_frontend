@@ -47,7 +47,7 @@
 </style>
 {:else}
 <Navbar_mobile />
-<div class="container" style="margin-top: 65px;">
+<div class="container" style="margin-top: 60px;">
 	<Home_mobile />
 </div>
 <Footer {client_device} />
