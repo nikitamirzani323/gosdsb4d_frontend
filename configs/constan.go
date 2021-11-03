@@ -1,3 +1,3 @@
 package configs
 
-const PATH_API string = "http://174.138.22.4:7071/"
+const PATH_API string = "http://10.104.0.9:7071/"
