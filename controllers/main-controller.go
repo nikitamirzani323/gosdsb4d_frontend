@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
+	"bitbucket.org/isbtotogroup/sdsb4d-frontend/configs"
 	"github.com/go-resty/resty/v2"
 	"github.com/gofiber/fiber/v2"
-	"github.com/nikitamirzani323/gosdsb4d_frontend/configs"
 )
 
 const PATH string = configs.PATH_API
