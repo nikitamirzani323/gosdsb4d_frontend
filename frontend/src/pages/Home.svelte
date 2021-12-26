@@ -359,13 +359,10 @@
         <br />
         <table class="table">
             <thead>
-                <tr
-                    style="background-color: #e91e65;border-style: none;border-bottom-color: #e91e65;"
-                >
+                <tr style="background-color: #e91e65;border-style: none;border-bottom-color: #e91e65;">
                     <th
                         colspan="4"
-                        style="text-align: center;vertical-align: top;font-size: 30px;color:white;"
-                    >
+                        style="text-align: center;vertical-align: top;font-size: 30px;color:white;">
                         <div class="float-end">
                             <div class="dropdown">
                                 <svg
@@ -400,33 +397,20 @@
                         SDSB4D DAY
                     </th>
                 </tr>
-                <tr
-                    style="background-color: #e91e65;border-bottom-color: #e91e65;"
-                >
+                <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
                     <th
                         width="*"
-                        style="text-align: left;vertical-align:top;font-size:15px;color:white;"
-                        >CURRENT DRAW</th
-                    >
+                        style="text-align: left;vertical-align:top;font-size:15px;color:white;">CURRENT DRAW</th>
                     <th
                         NOWRAP
                         width="50%"
-                        style="text-align: right;vertical-align:top;font-size:15px;color:white;"
-                        >{day_date_draw}, 03.00PM</th
-                    >
+                        style="text-align: right;vertical-align:top;font-size:15px;color:white;">{day_date_draw}, 03.00PM</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;border-bottom-color: #e91e65;">
-                <tr
-                    style="background-color: #e91e65;border-bottom-color: #e91e65;"
-                >
-                    <td
-                        style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;color:white;"
-                        >1st Prize</td
-                    >
-                    <td
-                        style="text-align: center;vertical-align:top;font-size: 15px;"
-                    >
+                <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
+                    <td style="text-align: center;vertical-align:middle;font-size: 18px;font-weight: bold;color:white;">1st Prize</td>
+                    <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width={size_image} src={day_img_1_prize1} alt="" />
                         <img width={size_image} src={day_img_2_prize1} alt="" />
                         <img width={size_image} src={day_img_3_prize1} alt="" />
@@ -434,15 +418,9 @@
                     </td>
                 </tr>
                 <tr
-                    style="background-color: #e91e65;border-bottom-color: #e91e65;"
-                >
-                    <td
-                        style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:white;"
-                        >2nd Prize</td
-                    >
-                    <td
-                        style="text-align: center;vertical-align:top;font-size: 15px;"
-                    >
+                    style="background-color: #e91e65;border-bottom-color: #e91e65;">
+                    <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:white;">2nd Prize</td>
+                    <td style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width={size_image} src={day_img_1_prize2} alt="" />
                         <img width={size_image} src={day_img_2_prize2} alt="" />
                         <img width={size_image} src={day_img_3_prize2} alt="" />
@@ -450,15 +428,10 @@
                     </td>
                 </tr>
                 <tr
-                    style="background-color: #e91e65;border-bottom-color: #e91e65;"
-                >
+                    style="background-color: #e91e65;border-bottom-color: #e91e65;">
+                    <td style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:white;">3rd Prize</td>
                     <td
-                        style="text-align: center;vertical-align:top;font-size: 18px;font-weight: bold;color:white;"
-                        >3rd Prize</td
-                    >
-                    <td
-                        style="text-align: center;vertical-align:top;font-size: 15px;"
-                    >
+                        style="text-align: center;vertical-align:top;font-size: 15px;">
                         <img width={size_image} src={day_img_1_prize3} alt="" />
                         <img width={size_image} src={day_img_2_prize3} alt="" />
                         <img width={size_image} src={day_img_3_prize3} alt="" />
@@ -697,55 +670,36 @@
     modal_header_css="color:white;font-weight:bold;"
     modal_body_css="height:500px;overflow-y: scroll;"
     modal_footer_css="padding:5px;"
-    modal_footer={false}
->
+    modal_footer={false}>
     <slot:template slot="body">
         <table class="table table-striped">
             <thead>
-                <tr
-                    style="background-color: #e91e65;border-bottom-color: #e91e65;"
-                >
+                <tr style="background-color: #e91e65;border-bottom-color: #e91e65;">
                     <th
                         width="*"
-                        style="text-align: center;vertical-align:top;font-size: 15px;color:#ffffff;"
-                        >DATE</th
-                    >
+                        style="text-align: center;vertical-align:top;font-size: 15px;color:#ffffff;">DATE</th>
                     <th
                         width="25%"
-                        style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;"
-                        >PRIZE 1</th
-                    >
+                        style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;">PRIZE 1</th>
                     <th
                         width="25%"
-                        style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;"
-                        >PRIZE 2</th
-                    >
+                        style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;">PRIZE 2</th>
                     <th
                         width="25%"
-                        style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;"
-                        >PRIZE 3</th
-                    >
+                        style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;">PRIZE 3</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
                 {#each listsdsbday as rec}
                     <tr style="">
                         <td
-                            style="text-align: center;vertical-align:top;font-size: 15px;color:#ffffff;"
-                            >{rec.sdsbday_date}</td
-                        >
+                            style="text-align: center;vertical-align:top;font-size: 15px;color:#ffffff;">{rec.sdsbday_date}</td>
                         <td
-                            style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;"
-                            >{rec.sdsbday_prize1}</td
-                        >
+                            style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;">{rec.sdsbday_prize1}</td>
                         <td
-                            style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;"
-                            >{rec.sdsbday_prize2}</td
-                        >
+                            style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;">{rec.sdsbday_prize2}</td>
                         <td
-                            style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;"
-                            >{rec.sdsbday_prize3}</td
-                        >
+                            style="text-align: right;vertical-align:top;font-size: 15px;color:#ffffff;">{rec.sdsbday_prize3}</td>
                     </tr>
                 {/each}
             </tbody>
@@ -760,55 +714,37 @@
     modal_header_css="color:#020c13;font-weight:bold;"
     modal_body_css="height:500px;overflow-y: scroll;"
     modal_footer_css="padding:5px;"
-    modal_footer={false}
->
+    modal_footer={false}>
     <slot:template slot="body">
         <table class="table table-striped">
             <thead>
                 <tr
-                    style="background-color: #ffd401;border-bottom-color: #ffd401;"
-                >
+                    style="background-color: #ffd401;border-bottom-color: #ffd401;">
                     <th
                         width="*"
-                        style="text-align: center;vertical-align:top;font-size: 15px;color:#020c13;"
-                        >DATE</th
-                    >
+                        style="text-align: center;vertical-align:top;font-size: 15px;color:#020c13;">DATE</th>
                     <th
                         width="25%"
-                        style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;"
-                        >PRIZE 1</th
-                    >
+                        style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;">PRIZE 1</th>
                     <th
                         width="25%"
-                        style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;"
-                        >PRIZE 2</th
-                    >
+                        style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;">PRIZE 2</th>
                     <th
                         width="25%"
-                        style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;"
-                        >PRIZE 3</th
-                    >
+                        style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;">PRIZE 3</th>
                 </tr>
             </thead>
             <tbody style="border-top:none;">
                 {#each listsdsbnight as rec}
                     <tr style="">
                         <td
-                            style="text-align: center;vertical-align:top;font-size: 15px;color:#020c13;"
-                            >{rec.sdsbnight_date}</td
-                        >
+                            style="text-align: center;vertical-align:top;font-size: 15px;color:#020c13;">{rec.sdsbnight_date}</td>
                         <td
-                            style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;"
-                            >{rec.sdsbnight_prize1}</td
-                        >
+                            style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;">{rec.sdsbnight_prize1}</td>
                         <td
-                            style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;"
-                            >{rec.sdsbnight_prize2}</td
-                        >
+                            style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;">{rec.sdsbnight_prize2}</td>
                         <td
-                            style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;"
-                            >{rec.sdsbnight_prize3}</td
-                        >
+                            style="text-align: right;vertical-align:top;font-size: 15px;color:#020c13;">{rec.sdsbnight_prize3}</td>
                     </tr>
                 {/each}
             </tbody>

@@ -35,7 +35,7 @@
 			</div>
 			<div class="col-sm-3">
 				<center>
-					<img src="https://i.ibb.co/ck4scTz/google-play.png" alt="">
+					<img src="google-play.png" alt="">
 				</center>
 			</div>
 		</div>
